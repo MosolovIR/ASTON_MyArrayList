@@ -30,12 +30,13 @@ public class MyArrayListTest {
     void testGet() {
         //Given:
         MyArrayList<Integer> list = new MyArrayList<>();
-
-        //When:
         list.add(5);
         list.add(15);
         list.add(1);
         list.add(8);
+
+        //When:
+        list.get(3);
 
         //Then:
         assertEquals(8, list.get(3));
@@ -45,12 +46,12 @@ public class MyArrayListTest {
     void testSet() {
         //Given:
         MyArrayList<Integer> list = new MyArrayList<>();
-
-        //When:
         list.add(5);
         list.add(15);
         list.add(1);
         list.add(8);
+
+        //When:
         list.set(3, 888);
 
         //Then:
@@ -61,8 +62,6 @@ public class MyArrayListTest {
     void testResize() {
         //Given:
         MyArrayList<Integer> list = new MyArrayList<>();
-
-        //When:
         list.add(1);
         list.add(2);
         list.add(3);
@@ -73,7 +72,8 @@ public class MyArrayListTest {
         list.add(8);
         list.add(9);
         list.add(10);
-        list.getCapacity(); // размер 10 по умолчанию
+
+        //When:
         list.add(11);
         list.getCapacity(); // 10 * 1,5 + 1
 
@@ -86,12 +86,12 @@ public class MyArrayListTest {
     void testRemove() {
         //Given:
         MyArrayList<Integer> list = new MyArrayList<>();
-
-        //When:
         list.add(5);
         list.add(15);
         list.add(1);
         list.add(8);
+
+        //When:
         list.remove(0);
 
         //Then:
