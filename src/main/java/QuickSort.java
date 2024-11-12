@@ -14,6 +14,15 @@ public class QuickSort {
     }
 
     /**
+     * Метод, который выполняет быструю сортировку на переданном списке с использованием компаратора.
+     * @param <T> Тип элементов в списке.
+     * @param list Список, который нужно отсортировать.
+     */
+    public static <T extends Comparable> void quickSort(MyArrayList<T> list) {
+        quickSort(list, 0, list.getSize() - 1, Comparable::compareTo);
+    }
+
+    /**
      * Рекурсивный метод быстрой сортировки для сортировки подмассивов.
      * @param list Список, который нужно отсортировать.
      * @param low Начальный индекс подмассива.
